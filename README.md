@@ -35,46 +35,16 @@ pip install django-client-manager
 3. Use the `ClientManager` in your code:
 
    ```python
-from django.db import models
-from .custom import Client
-
-class TestClient(Client):
-    pass
+   from django.db import models
+   from .custom import Client
+   
+   class TestClient(Client):
+       pass
  
    ```
 
 
 
-## Configuration Options
-
-- **PASSWORD_POLICY**: Dictionary to configure password strength requirements.
-
-- **EMAIL_VERIFICATION**: Boolean to enable or disable email verification for newly created user accounts.
-
-- **USER_PROFILE**: Boolean to enable or disable user profiles.
-
-## Example Usage
-
-```python
-# views.py
-
-from client_manager import ClientManager
-
-def register_user(request):
-    if request.method == 'POST':
-        client_manager = ClientManager()
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
-
-        user = client_manager.create_user(username=username, email=email, password=password)
-
-        # Additional logic, such as sending a verification email
-
-        return HttpResponse('User registered successfully!')
-    else:
-        return render(request, 'registration/register.html')
-```
 
 ## Contributions
 
