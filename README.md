@@ -27,34 +27,23 @@ pip install django-client-manager
 2. Configure your Django project settings:
 
    ```python
-   # settings.py
+   # models.py
    
-   AUTH_USER_MODEL = 'your_app.YourCustomUser'
+   from django-client-manager.client import Client
    ```
 
 3. Use the `ClientManager` in your code:
 
    ```python
-   from client_manager import ClientManager
+from django.db import models
+from .custom import Client
 
-   client_manager = ClientManager()
-   user = client_manager.create_user(username='example', email='example@example.com', password='securepassword')
+class TestClient(Client):
+    pass
+ 
    ```
 
-4. Customize the configuration as needed:
 
-   ```python
-   # settings.py
-   
-   CLIENT_MANAGER_SETTINGS = {
-       'PASSWORD_POLICY': {
-           'min_length': 8,
-           'require_uppercase': True,
-           'require_digits': True,
-       },
-       'EMAIL_VERIFICATION': True,
-   }
-   ```
 
 ## Configuration Options
 
