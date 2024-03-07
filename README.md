@@ -6,13 +6,11 @@ Django Client Manager is a Python library designed to streamline the process of 
 
 - **Easy Custom User Creation**: Simplifies the process of creating custom user accounts in Django projects.
 
-- **Flexible Configuration**: Allows customization of user creation through configuration options, making it adaptable to various project requirements.
+- **Password Hashing**: Create secure hashed password.
 
 - **Password Strength Validation**: Built-in password strength validation to enhance security.
 
-- **Email Verification**: Optional email verification for newly created user accounts.
 
-- **User Profile Support**: Integration with Django user profiles for additional user information.
 
 ## Installation
 
