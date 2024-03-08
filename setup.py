@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
 
+with open("README.md", "r") as f:
+    description = f.read()
 setup(
     name="django_client_manager",
     version="1.0",
@@ -10,7 +12,8 @@ setup(
     author="Quinn Narlo",
     author_email="pyquinnnarlo@gmail.com",
     description="A Client manager for custom django user.",
-    long_description="Django Client Manager is a Python library designed to streamline the process of creating custom user accounts in Django applications. This library simplifies the handling of Django's custom user creation by providing a set of convenient and efficient tools.",
+    long_description=description,
+    long_description_content_type="text/markdown",
     url="https://github.com/pyquinnnarlo/django-client-manager",
     
     # Other optional metadata
